@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Detective!!!!!!', 'I play with Legos', '9 its my favorite movie', 'I got the eyebrow piercing'];
+      ['Detective!!!!!!', 'I play with Legos', '9 is my favorite movie', 'I got the eyebrow piercing'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
