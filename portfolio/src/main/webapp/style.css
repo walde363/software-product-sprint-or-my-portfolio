@@ -2,6 +2,7 @@
     background-color: darkturquoise;
     
 }
+
 #content {
     width: 90%;
     display: table;
@@ -9,7 +10,7 @@
 }
 
 #greeting-container {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 #image-container {
@@ -48,7 +49,6 @@
     background-color: darkturquoise;
     margin: auto;
     float:right;
-    justify-content
 }
 
 #column2-containers {
