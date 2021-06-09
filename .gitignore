@@ -2,6 +2,6 @@
 .idea
 .project
 .settings/
-.theia
-.vscode
+.theia/
+.vscode/
 target/
