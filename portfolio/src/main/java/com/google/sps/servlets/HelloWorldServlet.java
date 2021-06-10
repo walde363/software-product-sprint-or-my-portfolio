@@ -12,7 +12,17 @@ public class HelloWorldServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello Waldemar Ramos Colon</h1>");
+    String json = "{"; 
+    json += "\"favoriteBand\" : "; 
+    json += "\"My favorite band is Avenged Sevenfold\""; 
+    json += ", "; 
+    json += "\"myHeight\" : ";
+    json += "\"I am 6 feet tall\""; 
+    json += ", ";
+    json += "\"favoriteGame\" : "; 
+    json += "\"My favorite video game series is God of War.\""; 
+    json += "}";
+    response.setContentType("application/json;");
+    response.getWriter().println(json);
   }
 }
