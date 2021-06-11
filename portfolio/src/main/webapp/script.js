@@ -32,7 +32,7 @@ async function fetchCall() {
 
   const responsejson = await response.json(); 
   
-  var index = Math.floor(Math.random() * 3);  
+  const index = Math.floor(Math.random() * Object.keys(responsejson).length);  
 
   const textContainer = document.getElementById('text-container'); 
   textContainer.innerHTML = responsejson[Object.keys(responsejson)[index]]; 
