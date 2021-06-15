@@ -30,8 +30,10 @@ function addRandomGreeting() {
 async function fetchCall() {
   const response = await fetch('/hello'); 
 
-  const responseText = await response.text(); 
+  const responsejson = await response.json(); 
+  
+  const index = Math.floor(Math.random() * Object.keys(responsejson).length);  
 
   const textContainer = document.getElementById('text-container'); 
-  textContainer.innerText = responseText; 
+  textContainer.innerHTML = responsejson[Object.keys(responsejson)[index]]; 
 }
