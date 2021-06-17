@@ -16,24 +16,47 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ['Detective!!!!!!', 'I play with Legos', '9 is my favorite movie', 'I got the eyebrow piercing'];
+    const greetings =
+        ['Detective!!!!!!', 'I play with Legos', '9 is my favorite movie', 'I got the eyebrow piercing'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    // Pick a random greeting.
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    // Add it to the page.
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = greeting;
 }
 
 async function fetchCall() {
-  const response = await fetch('/hello'); 
+    const response = await fetch('/hello');
 
-  const responsejson = await response.json(); 
-  
-  const index = Math.floor(Math.random() * Object.keys(responsejson).length);  
+    const responsejson = await response.json();
 
-  const textContainer = document.getElementById('text-container'); 
-  textContainer.innerHTML = responsejson[Object.keys(responsejson)[index]]; 
+    const index = Math.floor(Math.random() * Object.keys(responsejson).length);
+
+    const textContainer = document.getElementById('text-container');
+    textContainer.innerHTML = responsejson[Object.keys(responsejson)[index]];
+}
+
+function navigate(event, page) {
+    var i;
+    var display;
+    
+    switch(page){
+        case 'welcome-container':
+            display = 'flex'; 
+            break; 
+        case 'random-facts':
+            display = 'block'; 
+            break; 
+    }
+
+    ids = ['welcome-container', 'random-facts']
+
+    for (i = 0; i < ids.length; i++) {
+        document.getElementById(ids[i]).style.display = "none";
+    }
+
+    document.getElementById(page).style.display = display;
+    evt.currentTarget.className += " active";
 }
