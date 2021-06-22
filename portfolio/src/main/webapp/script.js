@@ -41,22 +41,45 @@ async function fetchCall() {
 function navigate(event, page) {
     var i;
     var display;
-    
-    switch(page){
+
+    switch (page) {
         case 'welcome-container':
-            display = 'flex'; 
-            break; 
+            display = 'flex';
+            break;
         case 'random-facts':
-            display = 'block'; 
-            break; 
+            display = 'block';
+            break;
+        case 'about-me':
+            display = 'block';
+            break;
     }
 
-    ids = ['welcome-container', 'random-facts']
+    ids = ['welcome-container', 'random-facts', 'about-me']
 
     for (i = 0; i < ids.length; i++) {
         document.getElementById(ids[i]).style.display = "none";
     }
 
     document.getElementById(page).style.display = display;
-    evt.currentTarget.className += " active";
+    // evt.currentTarget.className += " active";
+}
+
+function translation() {
+    const text = document.getElementById('about-me-text').innerText;
+    const languageCode = document.getElementById('language').value;
+
+    const resultContainer = document.getElementById('about-me-text');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text', text);
+    params.append('languageCode', languageCode);
+
+    fetch('/translate', {
+        method: 'POST',
+        body: params
+    }).then(response => response.text())
+        .then((translatedMessage) => {
+            resultContainer.innerText = translatedMessage;
+        });
 }

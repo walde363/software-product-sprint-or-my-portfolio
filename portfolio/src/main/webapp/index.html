@@ -12,7 +12,7 @@
 
     <div id="header">
         <button id="header-buttons" onclick="navigate(event, 'welcome-container')">Welcome</button>
-        <button id="header-buttons" >About me</button>
+        <button id="header-buttons" onclick="navigate(event, 'about-me')">About me</button>
         <button id="header-buttons">Skills</button>
         <button id="header-buttons">Projects</button>
         <button id="header-buttons" onclick="navigate(event, 'random-facts')">Random facts</button>
@@ -37,6 +37,29 @@
             Press to show response.
         </button>
         <p id="text-container"></p>
+    </div>
+
+    <div id="about-me">
+        <p id='about-me-text'>I am a really nice and happy person, I talk a lot, I like making new friends
+            and I am always singing. Right now I am working in a construction site
+            making construction rings, but in the future, I would like a job
+            that gives me the oportunity to help the world. I like to play videogames,
+            Guitar and guiro. I like a lot types of music but my favorites
+            are latin trap, merengue and heavy metal, wierd combination I know...
+            I am currently pursuing my Bachelor's Degree in Computer Engineering and
+            my field of interest is Data Science, but I like Back-end Developing too.
+        </p>
+
+        <p>What to read this in other language? Select the language and click the "Translate" button</p>
+
+        <select id="language">
+            <option value="es">English</option>
+            <option value="zh">Chinese</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
+            <option value="ar">Arabic</option>
+        </select>
+        <button onclick="translation();">Translate</button>
     </div>
 
 </body>
