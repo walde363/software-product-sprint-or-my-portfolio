@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -9,84 +9,58 @@
 </head>
 
 <body id="body">
-    <div id="content">
-        <div id="column1">
-            <div id="image-container">
-                <img src="/images/PortfolioFoto.jpeg" id="image" />
+
+    <div id="header">
+        <button id="header-buttons" onclick="navigate(event, 'welcome-container')">Welcome</button>
+        <button id="header-buttons" onclick="navigate(event, 'about-me')">About me</button>
+        <button id="header-buttons">Skills</button>
+        <button id="header-buttons">Projects</button>
+        <button id="header-buttons" onclick="navigate(event, 'random-facts')">Random facts</button>
+    </div>
+
+    <div id="welcome-container">
+        <div id="welcome-container-block">
+            <div>
+                <h1 style="color:white;">Waldemar Ramos Colon</h1>
+                <h3 style="color:white;">Computer Engineering Student</h3>
+                <h5 style="color:white;">Interamerican Univerity of Puerto Rico</h5>
+                <h5 style="color:white;">Bayamon Campus</h5>
             </div>
-
-            <h1>Waldemar Ramos Colón</h1>
-            <p>Computer Engineering student</p>
-            <p>I am a really nice and happy person, I talk a lot, I like making new friends
-                and I am always singing. Right now I am working in a construction site
-                making construction rings, but in the future, I would like a job
-                that gives me the oportunity to help the world. I like to play videogames,
-                Guitar and guiro. I like a lot types of music but my favorites
-                are latin trap, merengue and heavy metal, wierd combination I know...
-                I am currently pursuing my Bachelor's Degree in Computer Engineering and
-                my field of interest is Data Science, but I like Back-end Developing too.
-            </p>
-
-            <h1>Contact</h1>
-            <p>Phone: 7876698929</p>
-            <p>Linkedin: https://www.linkedin.com/in/waldemar-colon-902959186/</p>
-            <p>Github: https://github.com/walde363</p>
-            <p>Email: ramoswaldemar082@gmail.com</p>
-
         </div>
-
-        <div id="column2">
-            <div id="column2-containers">
-                <h1>Skills</h1>
-                <p>
-                    C++, C, Java, JavaScript, Python, SQL, Data Science, Data Base, React Native,
-                    Back-end Developing, Front-end Developing, Spring Boot, Numpy, Pandas, Matplotlib.
-                </p>
-            </div>
-
-            <div id="column2-containers">
-                <h1>Projects</h1>
-                <p>Robot Maker 2019, Developer January 2019–June 2019</p>
-                <p>
-                    Robot makers competition consists of creating prototypes of robot that meet the objectives of
-                    sustainable
-                    development
-                    promoted by the United Nations (UN). Our team’s project was to develop a drone capable of delivering
-                    a
-                    life
-                    saver to a person
-                    in distress in any type of body of water. My job was researching servos and came
-                    with
-                    ideas
-                    to install the
-                    servo in the drone and install the life saver drop mechanism.
-                </p>
-                <p>Honeywell Puerto Rico Navigation Challenge, Lead Software Engineer
-                    September 2019–Present</p>
-                <p>The main purpose of the competition is to give University students in Puerto Rico an opportunity to
-                    design,
-                    develop, and manufacture
-                    an unmanned aerial vehicle (UAV) using design lifecycle methodologies and processes with they will
-                    indubitably encounter in a real-world work environment.
-                    My role as a lead software engineer is to organize the software team. Supervise the tests and
-                    validate
-                    documentation.</p>
-                <p>SAM web application, Back-end developer</p>
-                <p>Creating a web application to facilitate the university associations accreditation process, I oversaw
-                    the modeling, design, implementation and testing of the data base, the local server and the
-                    connection
-                    between the
-                    front end and backend.</p>
-            </div>
+        <div id="welcome-container-image">
+            <img src="/images/PortfolioFoto.jpeg" id="welcome-image" />
         </div>
     </div>
-    <div>
+
+    <div id="random-facts">
         <button onclick="fetchCall();">
             Press to show response.
         </button>
         <p id="text-container"></p>
     </div>
 
+    <div id="about-me">
+        <p id='about-me-text'>I am a really nice and happy person, I talk a lot, I like making new friends
+            and I am always singing. Right now I am working in a construction site
+            making construction rings, but in the future, I would like a job
+            that gives me the oportunity to help the world. I like to play videogames,
+            Guitar and guiro. I like a lot types of music but my favorites
+            are latin trap, merengue and heavy metal, wierd combination I know...
+            I am currently pursuing my Bachelor's Degree in Computer Engineering and
+            my field of interest is Data Science, but I like Back-end Developing too.
+        </p>
+
+        <p>What to read this in other language? Select the language and click the "Translate" button</p>
+
+        <select id="language">
+            <option value="es">English</option>
+            <option value="zh">Chinese</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
+            <option value="ar">Arabic</option>
+        </select>
+        <button onclick="translation();">Translate</button>
+    </div>
 
 </body>
 

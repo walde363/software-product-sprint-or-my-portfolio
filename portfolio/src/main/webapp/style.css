@@ -1,58 +1,82 @@
+#html {
+    height: 100%; 
+}
+
 #body {
-    background-color: darkturquoise;
-    
+    background: linear-gradient(to bottom, #05668d 0%, #02c39a 100%);
+    margin: 0; 
+    height: 100%;
 }
 
-#content {
-    width: 90%;
-    display: table;
-    margin: auto;
+#header {
+    background: linear-gradient(to right, #05668d 0%, #02c39a 100%);
+    width: 100%;
+    height: 10%; 
+    text-align: center;
 }
 
-#greeting-container {
-    margin-top: 20px;
+#header-buttons {
+    background: linear-gradient(to right, #05668d 0%, #02c39a 100%);
+    height: 100%;
+    width: 19%;
+    border: 0cm;
 }
 
-#image-container {
-    width: 100%; 
+#header-buttons:hover {
+    background: linear-gradient(to right, #02c39a 0%, #05668d 100%);
+    height: 100%;
+    width: 19%;
+    border: 0cm;
 }
 
-#image {
-    width: 50%; 
-    height: 50%;  
+#welcome-container {
+    display: flex; 
+    width: 100%;
+    height: 90%;
+}
+
+#welcome-container-block {
+    width: 50%;
+    height: 100%;
+    flex: 1; 
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-container-image {
+    width: 50%;
+    height: 100%;
+    flex: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-image {
+    width: 75%; 
+    height: 75%;  
     display: block; 
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#header {
-    width:100%; 
-    height: 15%;
-    background-color: black;
-    text-align: center;
-}
-
-#column1 {
-    width: 550px;
-    display: table-cell;
-    background-color: white;
-    margin: auto;
-    float:left; 
-    padding:1%; 
-    border-radius: 5%;
-}
-
-#column2 {
-    width: 550px;
-    display: table-cell;
-    background-color: darkturquoise;
-    margin: auto;
-    float:right;
-}
-
-#column2-containers {
+#random-facts {
     width: 100%;
-    background-color: white;
-    padding: 1%;
+    height: 90%;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-me {
+    width: 100%;
+    height: 90%;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
